@@ -1,0 +1,65 @@
+% R1: It would be helpful to have some list or table with the issues you identified through the interviews. Maybe you could come up with a table that brings together the identified issues and the possible solutions.
+
+% Issue: What is the issue? | Why it is an issue | What might be the cause? | How to solve/mitigate the issue?
+
+\section{Discussion}
+
+    Our findings provide initial insights into the experiences of people living with \ac{AD}s using speech-enabled \ac{CA}s for the self-report of mental health and wellbeing in their home settings. Results suggest that \ac{CA}'s conversational features were considered highly useful for engaging and sustainable self-report experiences, while also suggesting that users' self-reporting experience is strongly shaped by strategies adopted to overcome \ac{CA}'s technical limitations, diverse personified perceptions of the agent, the socially-contingent nature of self-reporting practice and their' reflections on privacy and security concerns.
+    % 
+    Based on these findings, we identify the challenges of using \ac{CA}s for the self-report of mental health and wellbeing and discuss implications for designing future agents to support positive experiences of mental health self-report (See Table~\ref{tab:challenges}).
+
+    \input{tables/_challenges}
+    
+    
+    % Challenge 1 from Theme 1
+    \subsection{Reporting Burden}
+        
+        % Why it is an issue? 
+        Participants in this study demonstrated high levels of engagement (See Section ~\ref{sec:participant_engagement}), and described \acl{app} as efficient, easy to use and an attractive medium for the self-report of mental health and wellbeing. These qualities of speech-enabled \ac{CA}s indicate its capacity to alleviate reporting burden on the users --- one of the biggest challenges of the current self-report technologies~\cite{harari2016using, van2017experience, doherty2020design}
+        
+        However, participants in this study shared frustrating and disconnected self-reporting experiences due to the
+        \ac{CA} limitation that prevented users from expressing their emotions fully. To overcome \ac{CA} limitations, participants in this study employed tactics such as making multiple entries, adopting to \ac{CA}'s speech, and preparing in advance (Section~\ref{sec:strategies_to_overcome}) indicating their willingness to use the technology despite the limitations. While many participants in this study found these strategies feasible, the requirement of these additional actions to appropriate the technology undoubtedly added burden on the users. Research shows that such burden could could have negative impact on user experience, adherence as well as the quality of the self-reports~\cite{doherty2020design}.
+        
+        In order to alleviate this unintended self-reporting burden, we suggest improving \ac{CA}'s conversational skills by probing users' responses further and guiding conversation more.
+
+        \subsubsection{Enable Continuous Interaction by Appropriate Probing \& Guiding}
+        
+            In line with the participants' suggestions in Section~\ref{theme:design_recommendations}, we suggest improving \ac{CA}'s conversational skill by implementing conversational design that engages users in dialogues that allows continuous opportunities to express their emotions. 
+            
+            The \ac{CA} prototype used in this study asked only three questions in a session which often restricted users from expressing their emotions fully. Future \ac{CA}s could continuously probe and guide the conversation that engages users in a more `natural' and positive dialog and should not require them to make multiple entries or prepare in advance to self-report their wellbeing fully.
+            
+            While these recommendations align with prior \ac{CA} design guidelines (e.g.,~\cite{murad2019revolution, langevin2021heuristic}), the context of the self-report of mental health involving the vulnerable population group is worth noting. As such, the participants' suggestion to enable \ac{CA} to guide them to talk about positive things in their lives reflects more of a therapeutic intervention~\cite{tindall2017behavioural} than how it is interpreted in some of the well established heuristics for designing \ac{CA}s~\cite[Table 2. G10]{murad2019revolution}~\cite[Table 8]{langevin2021heuristic}. 
+            % 
+            
+
+   
+    %   Challenge 2 from Theme 2 and 3
+    \subsection{\ac{CA}-User Relationship Framing}
+    
+        Participants' involvement in this study required supporting high levels of trust given the potentially vulnerable nature of the population group, the stigma surrounding mental illness, and the novel nature of the technology itself. Participants' perceptions of \acl{app} as a good listener, a companion, and a tool for emotional venting and self-talking suggest \ac{CA}'s potential in fulfilling user's unmet gap in social interactions. Participants also shared their feeling of being heard while talking to \acl{app} -- a quality that we believe is fundamental for sustainable long term \ac{CA}-user relationships which could be beneficial for encouraging positive behavior change as reported in prior research (e.g.,~\cite{thieme2015designing, bickmore2005establishing}). Such connections and associations may also serve as a means of overcoming stigma for people with \ac{AD}s as they often tend to have less social interactions due to the social stigma attached their mental condition as reported by the participants in this study. 
+        
+        While the personified perceptions suggest the potential of \ac{CA}s to prove of meaningful value to users, they also raises questions concerning the potential ethical ramifications. As these devices grow ever more ubiquitous and technologically advanced to engage users in social conversations, there is potential for this vulnerable population group to become over-attached and even dependent to these systems, further isolating them from their social circle and distancing them from their personal relationships. In turn, the technology itself could be stigmatized. 
+        
+        Based on the narratives of the participants in this study, we suggest imbuing conversational characteristics to support social goals and empathy.
+
+        
+        \subsubsection{Imbuing Conversational Characteristics to Users' Support Social Goals}
+            
+            Participants in this study not only used \acl{app} as a tool to self-report their mental health and wellbeing, they expressed that they wanted the illusion that the \ac{CA} cared although they did not expect \ac{CA} to understand their emotions. Research suggests that \ac{CA}s with sensitivity to the context of interaction, including the sentiment of the users' utterance, the topic of the conversation and ability to formulate relevant follow-up questions based on user response could enable such conversational interactions~\cite{clark2019makes}. However, designers also have to be careful about the potentially negative impact of such design choices as discussed above.
+            
+        \subsubsection{Imbuing Conversational Characteristics to Support Empathy}
+
+            Many participants in the study appreciated \acl{app}'s response feedback and mentioned that it gave them a sense of being heard, although that was not the intention of the design as described in Table~\ref{tab:diary_mgmt}. Participants' desire for such emotional support from the \ac{CA} suggests the need for designing agents with ability to formulate empathetic responses to user utterances. With the possibility of tailoring voice features such as tone, intonation, speed and pitch, speech-enabled \ac{CA}s could emulate an empathetic self-reporting experience. Related work in text-based \ac{CA} demonstrated that such interactions could have positive effects on users' mental health and wellbeing~\cite{inkster2018empathy}. 
+            
+
+    %   Challenge 3 from Theme 4
+    \subsection{Privacy \& Data Security} 
+        % Why this is an issue?
+        Participants in this study often reported that their privacy concerns did not only lead to anxiety and paranoia, it also demotivated them to fully express their emotions. As a measure to protect their personal privacy, they often turned off the smart speaker when it was not in use, others held back on sharing sensitive information on their self-reports. These privacy seeking behaviors echo prior findings that advocate transparency on \ac{CA}'s privacy policies and data security practices to build trust between the users and \ac{CA}s~\cite{lau2018alexa, pradhan2018accessibility}. The need for users with mental illness to trust the technology is even more significant as privacy and data security concerns could have adverse effects on their mental health and well-being, as reported in Section~\ref{sec:eavesdropping}. 
+        
+        \subsubsection{Transparency on Privacy and Data Security to Support Trust}
+
+            Participants in this study were made aware of the data practices adhered to in this study, which included what data is collected and who has the access to it (Section ~\ref{sec:pre_study}). Transparency on such information enabled participants to take necessary steps to use the system on their own discretion. As such, some held back on sharing sensitive information on their self-report indicating that the participants in this study felt sufficiently able and assertive to establish bounds on the use and sharing of their data in line with their own levels of comfort and trust. It is therefore, 
+            
+            
+            

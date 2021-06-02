@@ -1,0 +1,121 @@
+\section{Introduction}
+
+    % 1. The current state of affairs
+    Much of what we know about mental health and wellbeing is gathered through self-reports drawn from patient diaries and validated health questionnaires~\cite{arean2016mobile, doherty2020design, doherty2018engagement}. These self-report methods, traditionally administered using pen and paper, have a long history, and are considered effective means of monitoring and assessing mental illnesses including depression and bipolar disorder. In recent years many have turned towards technology to facilitate such data collection methods; most often consisting of the direct implementation of questionnaires as web and mobile apps.
+    
+    %2.2 Usability/CHI
+    At the same time, \ac{HCI} researchers working on the design and use of technology to gather self-reports in daily life, often via \ac{EMA}, have drawn attention to the complexity of the self-report of mental health and wellbeing as a process in itself~\cite{rohani2020mubs, bardram2013designing, doherty2019engagement}. While \ac{GUI} based tools can serve as efficient means of collecting textual and visual data of many forms, these are but one medium for doing so, can limit users' capacity for self-expression, pose challenges for the assessment of the validity and reliability of data gathered, and can place a significant burden on users~\cite{harari2016using, van2017experience, doherty2020design}.
+    
+    Speech-enabled \ac{CA}s, in comparison, may offer the opportunity to obtain richer insight into individuals' experience of mental health and illness --- whether for sharing with health professionals~\cite{pradhan2018accessibility}, to support individuals' own insight~\cite{lucas2014s}, or perhaps even to serve as part of health and wellbeing interventions~\cite{wang2020alexa, duffy2021attitudes}. Studies have shown that speech, as a primary mode of communication, can engage users in more natural and human-to-human-like conversations, suggesting the potential of these systems to improve user engagement and self-report response quality while fostering more honest and insightful forms of self-disclosure~\cite{devault2014simsensei, lucas2014s} 
+    
+    Smart speaker devices including Google's Home and Amazon's Alexa have seen a surge in popularity in recent years following advancements in speech recognition technology --- rendering these technologies increasingly feasible means of interaction and even leading to increased application of these systems in healthcare ~\cite{laranjo2018conversational, provoost2017embodied, kim2019conversational, kocaballi2020conversational, kocaballi2019personalization,vaidyam2019chatbots}. According to one recent survey, $52.0\%$ of $1,004$ U.S. adults possess an interest in the use of \ac{CA}s, while $7.5\%$ have already made use of a \ac{CA} for a healthcare-related task or inquiry from inquiring about symptoms of illness ($73.0\%$), to searching for information concerning medication use ($45.9\%$), and to seeking care and treatment options ($37.7\%$)~\cite{Voicebot2019}. 
+    
+    % 3. a. Prior Research [CA technology limitations]
+    Despite such increased interest, expanded accessibility and even growing adoption of \ac{CA}s in healthcare, a number of significant technical limitations and challenges to the use of these systems for gathering self-reported data remain. Limitations to date identified by researchers include misinterpretation and failed recognition of user utterances resulting in confusion and further errors~\cite{myers2018patterns, suhm2003towards, pyae2018investigating}, \ac{CA}s' present inability to engage in dynamic conversations~\cite{onceakind2019minji}, the need to specify in advance what users can or cannot say during interaction~\cite{pradhan2018accessibility, corbett2016can, Learnability2017Furqan, pradhan2018accessibility}, and many \ac{CA}s' monotonous, robotic and unnatural voices which have been found to have adverse implications for users' engagement~\cite{miner2016smartphone, choice2020julia, persuasive2020Dubiel, nobody2020choi}.
+    
+    % 3. b. Prior Research [HCI]
+    In response, \ac{HCI} researchers have undertaken explorations of issues of privacy~\cite{lau2018alexa}, usability and user satisfaction~\cite{onceakind2019minji}, accessibility~\cite{purington2017alexa}, and attitudes towards~\cite{lopatovska2018personification} \ac{CA}s. Several researchers have proposed initial guidelines for the design~\cite{suhm2003towards, wei2018evaluating, murad2019revolution,clark2019makes} and evaluation of \ac{CA}s~\cite{kocabalil2018measuring}. While others have begun to explore questions of user experience, trust, feedback, self-reflection and learning during the collection of self-reports of mental and physical health and wellbeing~\cite{Rafal2018Workplace, quiroz2020alexa, PublicSpeaking2020Wang} as well as social engagement~\cite{sebastian2017changing, ring2015social, porcheron2018voice}. 
+    
+    % 3. c. Prior Research [(Mental)Health]
+    Research in the context of healthcare has investigated \ac{CA}s' effectiveness in supporting diagnostic performance, symptom disclosure, health intervention, adherence to self-management practices and technical issues in \ac{CA} dialog management~\cite[Table 3]{laranjo2018conversational}. And, although these technologies are currently insufficiently sophisticated to fully support dynamic human-to-human-like conversational interactions, other healthcare researchers have expressed interest in the anthropomorphic characteristics of \ac{CA}s as potential means of establishing and maintaining a therapeutic alliance that could facilitate greater disclosure and deeper insight into users' health and wellbeing~\cite{devault2014simsensei, cameron2018best, lucas2014s, lucas2017reporting, kim2019conversational}.
+
+    % 4. Research gap / motivation
+    While initial research therefore suggests the potential of \ac{CA}s to support practices of self-report and self-reflection, this is a highly-complex and emerging design space with many outstanding ethical, technical and medical challenges~\cite{vaidyam2019chatbots}. We know little about what people living with mental illness make of the idea of employing \ac{CA}s for the purposes of logging, discussing, reflecting on, reporting or monitoring their mental health, and even less about their lived experiences of engaging with such systems in the real-world, nor how to design for sustainable \ac{CA} self-report experiences. There exists, therefore, a need to understand, in practice and with representative users, the real-world experience of interacting with a \ac{CA} to support the self-report of mental health, the challenges of deploying these systems in the homes of users experiencing \ac{AD}s, and the choices available to designers in overcoming their limitations.
+    
+    % 5. What we attempt, and hope to achieve
+    In order to understand this demographic group’s real-world \ac{CA} self-report experiences and broader perceptions of technology for the self-report of mental health and wellbeing, we recruited $20$ individuals who self-identified as diagnosed with an \ac{AD}, either depression or bipolar disorder, and conducted a study `in the wild' for the purpose of addressing the following research questions;
+    
+    \begin{enumerate}[label=RQ\arabic*:]
+
+        \item\label{rq:1} How do people living with \ac{AD} experience the use of a speech-enabled \ac{CA} for the self-report of mental health and wellbeing in their everyday lives?
+        
+        % \item\label{rq:2} What do people living with \ac{AD} perceive as, and how do they balance, the benefits and risks of employing and interacting with a \ac{CA} for the self-report of mental health and wellbeing?
+        \item\label{rq:2} What are the challenges of employing \ac{CA}s for the self-report of mental health and wellbeing in home contexts?
+
+        \item\label{rq:3} Which choices and strategies might designers employ in order to overcome the current limitations of \ac{CA}s in support of sustainable practices of self-report?
+        
+    \end{enumerate}    
+
+    % 6. Method
+    A four-week `in the wild' study was designed to enable people living with \ac{AD}s to experience the verbal self-report of mental health and wellbeing via \ac{CA}. During this study, participants kept a daily open-ended conversational diary log of their mental health and wellbeing, and responded to the \ac{WHO-5} questionnaire fortnightly using a speech-enabled \ac{CA} named \acl{app} deployed via Google Nest device. 
+
+    % 7. Results  
+    Participants' positive responses to the \ac{UEQ} and high levels of engagement with the \ac{CA} despite technical limitations serve as initial evidence for users' willingness to accept the use of these systems for the self-report of mental health and wellbeing in the home context. Results from thematic analysis of post-study interviews reveal users' experiences as strongly shaped by strategies adopted to overcome \ac{CA}s' technical limitations, diverse personified perceptions of the agent, the socially-contingent nature of self-reporting practice, users' reflections on privacy and security concerns, as well as the \ac{CA} features considered important for engaging and sustainable self-report experiences.
+
+    % 8. Discussion
+    We discuss implications for the design of \ac{CA}s for mental health and wellbeing with respect to the challenges surfaced by this work including challenges of conversational pattern matching, filling unmet interpersonal gaps, and the use of self-report \ac{CA}s in the at-home social context.
+     
+    % 9. Contribution
+    This work contributes; (i) an understanding of factors impacting the self-report experiences and behaviors of people with \ac{AD}, and (ii) implications for the future design of speech-enabled \ac{CA}s to support the self-report of mental health and wellbeing.
+    
+% UNUSED NOTES
+% Inspirational papers:
+% https://dl.acm.org/doi/10.1145/3290605.3300705
+% https://dl.acm.org/doi/10.1145/3274371
+% \begin{enumerate}[label=RQ\arabic*]
+%     \item\label{rq:1} how people with mental illness perceive \acp{CA}, 
+%     \item\label{rq:2} what qualities they feel should manifest in \acp{CA} interactions, and 
+%     \item\label{rq:3} how they should be implemented to support the self-reports of health and wellbeing.
+% \end{enumerate}
+% This paper aims to bridge this gap by exploring the relationship between conversational design and users' self-reporting practices in the case of a \ac{CA} for the self-report of mental health and well-being.
+% We report on $59$ participants' experiences of one of two distinct designs of a \ac{CA} named \acl{app}; the first requiring discrete responses to the \ac{WHO-5} well-being scale and the second allowing for more open-ended responses to the same series of questions. Adopting a mixed-methods approach, we seek to inform the future design of \acp{CA} for health and well-being by addressing three research questions, exploring;
+% devault2014simsensei = interview and not daily diary 
+% To the best of our knowledge, there has not been any studies examining the effectiveness and challenges in \ac{CA} that allows patients to maintain daily diary and support self-report of health questionnaire. 
+% Therefore, we aim to answer the following two research questions:
+% \begin{itemize}
+%     \item [RQ1:] How do patients with affective disorders perceive CAs as a tool to self-report?\label{rq:1} 
+%     \item [RQ1:] What are the enablers and barriers to self-report of health and wellbeing via \acp{CA}?\label{rq:2} 
+% \end{itemize}
+% To answer these questions, we design a `in the wild' study that compares the use of \ac{CA} and traditional \ac{WA} to keep a daily diary and self-report to a health questionnaire. As a result we contribute to the emerging field of \ac{CA} for health and well-being~\cite{kocaballi2020conversational, kim2019conversational} by providing:
+% \begin{enumerate}
+%     \item An understanding of the effect of \ac{CA} in patients' experience with diary entry and self-reporting health questionnaire.
+%     \item Implications for designing \ac{CA} to support self-report of health and well-being `in the wild'.
+% \end{enumerate}
+% Shortage of mental health personnel
+% There is a global median of 9 mental health workers including approximately 1 psychiatrist per 100,000 people -The WHO Mental Health Atlas 2017
+% Long waiting times
+% National Health Service (NHS) mental health trusts in the United Kingdom had year-long waiting periods before therapy started, and in some locations, waiting periods were close to 2 years
+% Perceived stigma
+% Social and personal stigma
+% Point-in-time support 
+% Traditional face-to-face psychotherapy provides only Point-in-time support
+% The primary hypothesis of the study is that SOPHIA will improve the collection of patient self-reports by providing \textit{effortless}, and \textit{empathetic} reporting experience contributing towards the better health care for the patients with AD
+% What are the best ways to provide feedback or confirmation? 
+% How should the system deal with troubles in understanding? 
+% What constitutes a good user experience? What are people's perceptions and mental models about conversational agents? 
+% How do users build trust toward conversational agents? 
+% 3.a Why CAs? 
+% -- limitations in GUI tools -- 
+% -- limited form of self-expression --
+% -- speech based natural interpersonal interaction  --
+% -- anthropomorphic/expressive talking --
+% -- popularity in healthcare --
+% -- CA challenges/limitations --
+% 4.b. Research to date -- CA in healthcare
+% TEXT-BASED: {kocielnik2018reflection, kocielnik2018helping, kocielnik2018designing}.
+% and wellbeing where social interaction and bond are important for delivering particular services (e.g. health, social care or education).
+% which makes it difficult for patients with affective disorders to express their mental state with limited forms of interactions.
+% This is especially true in contexts where social interaction and bond are important for delivering particular services (e.g. health, social care or education).
+%  While these \ac{GUI} based tools are considered efficient in collecting textual and visual forms of self-reports, studies have reported significant decline in quality and frequency of self-reports in longitudinal studies due to the lack of engagement and reporting burden~\cite{harari2016using, van2017experience, doherty2020design}. 
+% Research has explored speech-enabled \acp{CA} as an alternative mode of interaction to extend the accessible and engaging ways of self-reporting about mental health and wellbeing.
+% suggesting that conversations between users and \acp{CA} be relevant to interpersonal interactions. 
+% This anthropomorphic quality of \acp{CA} enables users to form a relationship with \acp{CA}~\cite{waytz2010sees, bickmore2005establishing}, and constitutes a unique opportunity to serve as the media for expressive talking, in turn fostering more honest and insightful forms of self-disclosure, as well as increased user engagement~\cite{devault2014simsensei, lucas2017reporting, lucas2014s}. 
+% Others have explored health-related outcomes including therapeutic alliance, trust, safety and human intervention~\cite{kim2019conversational}.
+% The gap in extends to a lack of knowledge concerning users' experiences of engaging with a CA designed to support the self-report of mental health and well-being, not the qualities they would liek to see embodied in such CA designs.
+% about how people with mental illness perceive talking to \acp{CA}, and what qualities they feel should manifest in \acp{CA} to support the self-reports of health and wellbeing, given the technical limitations mentioned above.
+% We conclude by reflecting on the enablers and barriers to positive \ac{CA} self-report experiences, our ethical and conceptual reflections on the design and use of \acp{CA} to support mental health and wellbeing.
+% How people with \ac{AD} perceive the use of a \ac{CA} for the self-report of mental health?
+% UEQ/Adherence:
+% What factors shape their self-reporting experiences?
+% users' experience strongly shaped by actions taken to overcome the technological limitations of \acp{CA}, 
+% diverse personified perceptions of a self-report agent, 
+% the socially-contingent nature of self-reporting practice as well as 
+% How do they appropriate self-reporting \ac{CA} into their own lives for  the self-report of mental health and wellbeing? 
+% users' reflections on privacy and security concerns.
+%  \footnotetext[1]{``An affordance is defined both by the physical properties of the environment and perceptions of the participant in that environment.''~\cite{brause2020externalized}}
+% The popularity of the speech interfaces and the increasing use cases of \ac{CA}s in healthcare-related task reflect the technology's wider acceptance among everyday users.
+% \item\label{rq:2} Which factors shape people living with \acp{AD}' experiences of the self-report of mental health via \ac{CA}?
+% \item\label{rq:3} What are the challenges of using \ac{CA}s for the self-report of mental health and wellbeing? 
+% Results from the thematic analysis of participants' comments provided during post-study interviews demonstrate \ac{CA}'s potential as an engaging medium for the self-report of mental health and wellbeing, as reflected in strategies adopted by participants to overcome technical limitations, diverse personified perceptions of the agent, acceptance among users' social circles  and positive impacts on their personal relationships. Furthermore, in addition to the \ac{CA}'s technical limitations, users' social context and privacy perceptions were identified as primary challenges to  to \ac{CA} self-reports. From their four-week experience of self-reporting via \ac{CA}, participants suggested several design choices to improve agents' conversational skills as well as features important for sustainable \ac{CA} self-reports.
+% We discuss implications for the design of \ac{CA}s for mental health and wellbeing, reflecting on the challenges of employing \ac{CA}s for the self-report of mental health, ethical ramifications of \ac{CA} personification, the value of a relationship-oriented design framing, and users' desired futures to support sustainable \ac{CA}-user relationships.
+% , and implications for designing future \ac{CA}s to support sustainable \ac{CA}-user relationships.

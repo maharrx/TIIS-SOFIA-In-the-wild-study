@@ -1,0 +1,87 @@
+\section{Method}
+    
+    A four-week `in the wild' study was designed to enable people living with \ac{AD}s to experience the self-report of mental health and wellbeing via \ac{CA}. Our aims in conducting this study were to generate an understanding of users' perspectives and experiences with respect to the use of \ac{CA}s for the self-report of mental health and to identify key factors in the design of sustainable and engaging self-report experiences.
+    
+    \subsection{Participant Recruitment}
+    
+        $20$ participants ($16$ females) with an average age of $27.5$ living in three regions of Denmark (Odense, Copenhagen and Jutland) and with diverse backgrounds were recruited via online platforms including a national patient recruitment site\footnote{\url{http://www.forsoegsperson.dk/}}, social media (e.g., Facebook, Twitter), university internal email, and posters placed within the university campus. The study was advertised as a non-clinical study providing users the opportunity to interact with a conversational agent via Google Nest device for the self-report of metal health and wellbeing. Participants were therefore not screened for \ac{AD}s. Inclusion criteria for participating in the study required participants to; (i) be over the age of 18, (ii) identify as diagnosed with an \acf{AD}, and (iii) have continuous access to WiFi. Table~\ref{tab:demographics} provides an overview of participants' demographic characteristics. Of the $20$ participants, $45\%$ reported that they had other health conditions and $25\%$ reported no prior experience using \ac{CA}s.
+        
+        \input{tables/_demographics}
+        
+        Participants were offered a Google Nest Mini 2 device or a gift card corresponding to DKK $300$ ($\sim$US$\$ $50) for their participation. This study was exempted from ethical approval by the Danish National Committee on Health Research Ethics (Journal no. 21024788) in accordance with Section 14 (2) of the Danish Act on Research Ethics Review of Health Research Projects~\cite{NVK_guideline}. However, the highest research ethics standards were adhered to at each step of this process including during the recruitment and engagement of participants~\cite{NVK_guideline}.
+        
+    \subsection{\acl{CA} Implementation}
+        
+        % IMPLEMENTATION DETAILS
+        In order for participants to experience a state-of-the-art speech-based self-reporting practice, we designed a prototype agent named \acl{app} using Dialogflow\footnote{\url{https://dialogflow.com}} and deployed it via Google Nest Mini smart speakers.
+
+        % CHOICE & GOAL: Combination of open-ended and discrete response options 
+        \acl{app} combines a) an open-ended dialog design emulating a human-to-human like conversation allowing users to freely express their mental state at any time, with  b) fortnightly completion of the \ac{WHO-5} health questionnaire. We employed a `Wizard of Oz'~\cite{baum2008wonderful} method involving the participation of the authors and one external \ac{HCI} researcher to contrast multiple dialog designs, and in order to reduce the otherwise repetitive nature of the conversation.
+        
+        % What informed open-ended dialog design? How was it designed?
+        The open-ended dialog design of \acl{app} was adapted from a similar study of \ac{CA}s for healthcare decision support~\cite{devault2014simsensei} and comprised three separate questions. The first question asked users to express their current emotional and mental health status, the second asked users to elaborate further upon their mental health and wellbeing, and the third asked users whether there was anything more they would like to add. Table~\ref{tab:diary_mgmt} provides an overview of the dialog management as implemented in \acl{app} including key intents, their purpose, and example dialogues.
+        
+        % The choice of the WHO-5 questionnaire for this study and its real world implementations
+        The \ac{WHO-5} scale was chosen for use through \acl{app} as an established self-reporting questionnaire requiring respondents to summarize their wellbeing over the past two weeks by responding to five short questions according to a Likert scale, is less invasive than many clinical questionnaire, and is appropriate for a general population group~\cite{topp20155}. In order to render the \ac{WHO-5} questionnaire more conversational in nature, slight variations were incorporated into the wording of the preamble and the questions, as previously practiced in digital mental health research \cite{torous2015utilizing}. 
+
+        The purpose of combining these two distinct forms of self-report (open-ended and \ac{WHO-5} Likert scale) was to enable us to understand users' experiences of different variants of conversational self-report rather than to measure changes in users' wellbeing or emotions over time. While significant validation studies would be essential to enable the use of self-reports obtained through either the \ac{WHO-5} questionnaire or open-ended diary for clinical use, it is important to understand the relationship between different conversational design strategies and users’ self-reporting experiences in order to inform future \ac{CA} designs, given that we are likely to soon see increased conversion of these questionnaires for delivery via \ac{CA} following growing adoption of these systems in healthcare~\cite{Voicebot2019}.
+
+        % How Sofia works: other features
+        \acl{app} provides fallback re-prompts following two types of errors: (i) `no response' in which case the respondent takes too long to respond; and (ii) `no match' in which case \acl{app} does not understand the respondent. Respondents have three opportunities to respond to a question following these errors. After three re-prompts, \acl{app} ends the conversation. If needed, users can ask \acl{app} to repeat the question by stating ``repeat'' or ``what was the question?''. During the fortnightly \ac{WHO-5} questionnaire, users can also ask for help by stating ``help'' or ``what are my options,'' in which case \acl{app} repeats the preamble (``You can answer the question on the scale of 0 to 5; 0 being at no time, and 5 being all of the time''). Respondents can also end the conversation at any time by voicing the phrase ``quit'' or ``stop''. Upon completion of the session, \acl{app} thanks the patient for sharing their information and bids them farewell. 
+
+        \input{tables/_dialog_mgmt}
+        
+    \subsection{Study Procedure}
+        
+        This complete study consisted of a between-group study design contrasting the outcomes of two self-report methods, \acl{app} and a distinct text-based web app, with respect to the quality of the self-reported data and users' engagement. In this paper, we focus on the qualitative analysis of post-study interviews conducted with the \ac{CA} users alone. % Other findings will be described in future scientific publications.
+
+        The study procedure comprised the following three phases;
+        
+        \subsubsection{Pre-study}\label{sec:pre_study}
+            
+            % Information sheet & consent form
+            During individual pre-study sessions, each participant was provided with a participant information sheet detailing the study's motivations and expectations of participants. This handout also described the \ac{CA}'s limitations (e.g., the $8$ to $12$ second limit on each open-ended response), instructions regarding how to interact with \acl{app} (e.g., invocation phrases, repeating questions, ending the conversation), what \acl{app} can and cannot do, the data collected though \acl{app} during the study, and informed participants of the research team's access to the pseudo-anonymised self-report transcripts.
+                
+            Each eligible participant was asked to sign a consent form and provide demographic information including their name, email, age, gender, education level, employment, year when diagnosed with \ac{AD}, symptoms last experienced, other known health conditions, technical ability, and prior experience using \ac{CA}s. 
+                
+            % Device setup
+            Participants were then familiarized with \acl{app} by taking them through the set-up process, which involved pairing the Google Nest device with users' smartphone devices and creating an account with \acl{app}, as well as a sample conversation. While creating a user account, users were asked to share their details such as name, email address and profile picture with \acl{app}.
+                
+            % CA notification mechanism
+            Participants were informed that \acl{app} did not actively trigger notifications to remind participants to engage in the self-report of their mental health. They were however, encouraged to use Google Assistant's `routine'\footnote{ \url{https://support.google.com/googlenest/answer/7029585?co=GENIE.Platform\%3DAndroid&hl=en}} feature, ask the assistant to remind them to speak to \acl{app} everyday, or use other methods of their own preference to set up a daily reminder.
+                
+        \subsubsection{In-study}\label{sec:in_study}
+
+            During the four-week study, each participant was expected to invoke \acl{app} in order to self-report their mental state by answering a series of three questions every day, and responding to the \ac{WHO-5} questionnaire fortnightly. Each self-report session started with the participant invoking \acl{app}. \acl{app} then greeted the user and asked how they were feeling. The agent then took the user through two additional open-ended questions designed to gather further insight into their mental state. Additionally, every two weeks, \acl{app} asked the users to respond to the \ac{WHO-5} questionnaire, following conclusion of the daily open-ended conversation. Data collected through \acl{app} included automatically-transcribed participant responses to the open-ended questions as well as the \ac{WHO-5} questionnaire, and timestamps for each question and response. 
+            
+        \subsubsection{Post-study}\label{sec:post_study}
+            
+            Upon conclusion of the study, participants filled out the \ac{UEQ}~\cite{laugwitz2008construction} questionnaire, yielding a subjective assessment of \acl{app}'s usability and their individual experience.\footnote{The \ac{UEQ} is a 26-item, seven point Likert scale questionnaire covering six key user experience dimensions; Attractiveness, Perspicuity, Efficiency, Dependability, Stimulation, and Novelty~\cite{laugwitz2008construction}.} Finally, each participant took part in a semi-structured interview regarding their experience of \acl{app}, their overarching views of the technology and thoughts on the future design of speech-enabled conversational self-report agents. Interviews lasted between 25 to 65 minutes and were audio-recorded. Due to COVID-19 guidelines regarding social distancing and travel restrictions, $50\%$ of the pre-study sessions were conducted online and the Google Nest device shipped directly to participants. $85\%$ of the post-study interviews were conducted online. Due to constraints on their personal time, one participant (P17) was interviewed via a series of emails.
+         
+    \subsection{Analysis}
+    
+        Following the principles of Braun \& Clarke's thematic analysis~\cite{braun2006using, blandford2013semi}, authors 1 and 2 analyzed the interview transcripts together, generated initial codes by inductive process, and grouped related codes and supporting quotes into categories to form candidate themes. These candidate themes were then iteratively reviewed and refined with the additional involvement of the third author to produce final themes. Participants' responses to the \ac{UEQ} questionnaire were analyzed using the data analysis tool provided\footnote{\url{https://www.ueq-online.org/Material/Data_Analysis_Tools.zip}} in Microsoft Excel (v.~16.16.27). Participants' log data, including self-reports and their timestamps were additionally analyzed in R (v.~3.6.2). Participants' open-ended self-reports were summarized in a word cloud following removal of stop-words, punctuation, symbols and any words appearing less than $5$ times in the corpus using the `Quanteda' (v. 2.1.1) library in R~\cite{Benoit2018}.
+
+% UNUSED NOTES    
+% FOR THIS PAPER, WE MENTION CA DEPLOYMENT and INTERVIEW AS A PART OF THE STUDY.
+% https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/semi-structured-qualitative-studies
+% Key Design CHOICES and design GOALS
+% \ac{SASSI}, 
+% and \ac{BFI-10}     
+% to allow us to generate an understanding of users' perspectives on conversational self-reports and identify important \ac{CA} design characteristics for self-reporting of mental health and wellbeing.
+% We chose to deploy \acl{app} via smart-speakers as we wanted to understand users' acceptance of this novel user interface, which is growing exponentially and allows a completely hands-free interaction providing a distinct self-reporting experience than any other traditional means.
+% (i) Attractiveness: Overall impression of the product. Do users like or dislike it?
+% (ii) Perspicuity: Is it easy to get familiar with the product and to learn how to use it?
+% (iii) Efficiency: Can users solve their tasks without unnecessary effort? Does it react fast?
+% (iv) Dependability: Does the user feel in control of the interaction? Is it secure and predictable?
+% (v) Stimulation: Is it exciting and motivating to use the product? Is it fun to use?
+% (vi) Novelty: Is the design of the product creative? Does it catch the interest of users?~\cite{laugwitz2008construction}     
+% During the process, the transcripts were read and discussed several times to code similar quotes. . 
+% A four-week `in the wild' study was designed to enable people living with \ac{AD}s to experience the self-report of mental health and wellbeing via \ac{CA}. Our aims in conducting this study were to generate an understanding of users' perspectives and experiences with respect to the use of \ac{CA}s for mental health self-report and to identify essential factors for the design of positive self-report experiences.
+% With an aim to generate an understanding of people living with \ac{AD}s' experiences of using speech-enabled \ac{CA}s for the self-report of mental health and wellbeing and to identify essential factors for designing such systems, we designed a \ac{CA} prototype that enabled users to verbally self-report their mental health and wellbeing and deployed it in a four-week study `in the wild'.
+% The \ac{WHO-5} scale is an established reporting mechanism requiring respondents to summarize their wellbeing by responding to five short questions using a Likert scale. The combination of these two distinct forms of self-report would also enable us to understand users' perceptions of different variants of conversational self-report.
+% How Sofia works: Open-ended / WHO-5 questionnaire
+% Table~\ref{tab:diary_mgmt} provides an overview of the dialog management as implemented in \acl{app} including key intents, their purpose and example dialogues. Each self-report session started with \acl{app} greeting the user and asking how they were feeling. \acl{app} then took the user through two additional open-ended questions designed to provide further insight into their mental state. Each question had multiple variations in order to reduce the otherwise repetitive nature of the conversation. Additionally, every two weeks, \acl{app} asked the users to respond to the \ac{WHO-5} questionnaire, following the daily open-ended conversation. \acl{app} stated the preamble, and then asked the \ac{WHO-5} questions in random order. In order to render the questionnaire more conversational in nature slight variations were incorporated into the wording of the preamble and the questions, as previously practiced in digital mental health research \cite{torous2015utilizing}. 
+% To alleviate any unintended self-reporting burden often placed on the users by the system~\cite{doherty2020design,van2017experience} and to enable users to self-report on their own schedule, we decided not to implement notification mechanism within \acl{app}. 
+% Participants were walked through and provided a handout describing \ac{CA}'s limitations (section~\ref{sec:ca_limitations}), instructions regarding how to interact with \acl{app} (e.g., invocation phrases, repeating questions, ending the conversation) and what \acl{app} can and can not do. Participants were encouraged to use Google Assistant's `routine'\footnote{\url{https://support.google.com/googlenest/answer/7029585?co=GENIE.Platform\%3DAndroid&hl=en}} feature or set up a reminder by asking the assistant to remind them to speak to \acl{app} everyday.
+% Attractiveness is about overall impression of the system. Perspicuity measures how easy to get familiar and learn how to use the system. Efficiency concerns with users ability to solve their tasks without unnecessary effort. Dependability summarizes users feeling of being control of the interaction, system's security and predictability. Stimulation assesses the degree of users' excitement and motivation to use the system. Novelty seeks answers regarding the creativity and innovation involved in the design of the system~\cite{laugwitz2008construction}.

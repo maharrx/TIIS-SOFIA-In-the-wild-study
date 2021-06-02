@@ -1,0 +1,66 @@
+\begin{table}[t]
+    \footnotesize
+    \renewcommand{\arraystretch}{1}
+    \caption{ Dialog management in \acl{app}: Key intents, their purposes and examples}
+    \begin{tabular}{p{3cm} p{4cm} p{6cm} }
+        \toprule 
+        \textbf{Intents} & \textbf{Purpose} & \textbf{Example} \\
+        \midrule
+        Greeting                & Build rapport                                             & \makecell[l]{
+                                                                                                            User: Hey Google, talk to \acl{app}. \\ 
+                                                                                                            \acl{app}: Good evening, [name of the user]. \\ 
+                                                                                                            }\\
+        
+        \rowcolor[gray]{.95}
+        % Prompt                  & Ask for information                                       & \acl{app}: How are you feeling today? \\ 
+        Response Prompting      & Ask for information                                       & \acl{app}: How are you feeling today? \\ 
+        
+        Response Feedback       & Acknowledge the user's responses                              & \makecell[l]{
+                                                                                                            User: I'm feeling great! \\ 
+                                                                                                            \acl{app}: Thanks for sharing that.\\
+                                                                                                            }\\
+
+        \rowcolor[gray]{.95}                        
+        Continuation prompts    & Ask for more information                                  & \acl{app}: Please share more about your feelings. \\ 
+        % Probe                   & Ask for more information                                  & \acl{app}: Please share more about your feelings. \\ 
+        
+        Handle user question    & Answer user queries                                       & \makecell[l]{
+                                                                                                            User: What do you want to know? \\ 
+                                                                                                            \acl{app}: Anything you want to share.
+                                                                                                            }\\
+        \rowcolor[gray]{.95}                        
+        Confirmation prompts    & Ask if there is more to add                               & \makecell[l]{
+                                                                                                            User: I had a great time with my friends today. \\ 
+                                                                                                            \acl{app}: Do you want to add anything else?\\
+                                                                                                            }\\
+
+        
+        No response error       & Ask user for the response                                 & \makecell[l]{
+                                                                                                            User: [Silence] \\ 
+                                                                                                            \acl{app}:  Sorry, I didn't get that. Please share \\
+                                                                                                            more about your feelings.
+                                                                                                            }\\
+                                                                                                            
+        \rowcolor[gray]{.95}
+        No match error          & Ask user for a response within the provided options       & \makecell[l]{
+                                                                                                            \acl{app}: On the scale of 0 to 5, \\
+                                                                                                            0 being `at no time', and 5 being `all of the \\
+                                                                                                            time' Over the last 2 weeks, how often\\ 
+                                                                                                            have you felt cheerful and in good spirits?\\ 
+                                                                                                            User: I don't know.\\
+                                                                                                            \acl{app}:You can answer the question on the \\
+                                                                                                            scale of 0 to 5.
+                                                                                                            }
+                                                                                                            \\
+
+        Farewell                & Indicate end of the session                               & \makecell[l]{
+                                                                                                            User: I don't have anything else to share. \\ 
+                                                                                                            \acl{app}: Talk to you next time. Bye!
+                                                                                                            }\\
+                                                                                                            
+
+        \bottomrule
+    \end{tabular}
+    \label{tab:diary_mgmt}
+\end{table}
+
